@@ -29,37 +29,42 @@ function render(variables = {}) {
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
-  let myName = `${variables.name}`;
-  variables.name == null ? (myName = "Name") : null;
+  let myName = variables.name == null ? (myName = "Name") : variables.name;
 
-  let myLastName = `${variables.lastName}`;
-  variables.lastName == null ? (myLastName = "LastName") : null;
+  let myLastName =
+    variables.lastName == null ? (myLastName = "LastName") : variables.lastName;
 
-  //let position = `${variables.socialMediaPosition}`;
-  //variables.socialMediaPosition == "position-left"
+  //let position = variables.socialMediaPosition == "position-left"
   //  ? (variables.socialMediaPosition = "position-left")
   //  : (variables.socialMediaPosition = "position-right");
 
-  let profession = `${variables.role}`;
-  variables.role == null ? (profession = "Your Profession") : null;
+  let profession =
+    variables.role == null ? (profession = "Your Profession") : variables.role;
 
-  let myCity = `${variables.city}`;
-  variables.city == null ? (myCity = "City") : null;
+  let myCity = variables.city == null ? (myCity = "City") : variables.city;
 
-  let myCountry = `${variables.country}`;
-  variables.country == null ? (myCountry = "Country") : null;
+  let myCountry =
+    variables.country == null ? (myCountry = "Country") : variables.country;
 
-  let myTwiter = `${variables.twitter}`;
-  variables.twitter == null ? (myTwiter = "4geeksacademy") : null;
+  let myTwiter =
+    variables.twitter == null
+      ? (myTwiter = "4geeksacademy")
+      : variables.twitter;
 
-  let myGithub = `${variables.github}`;
-  variables.github == null ? (myGithub = "4geeksacademy") : null;
+  let myGithub =
+    variables.github == null
+      ? (myGithub = "4geeksacademy")
+      : variables.myGithub;
 
-  let myLinkedin = `${variables.linkedin}`;
-  variables.linkedin == null ? (myLinkedin = "school/4geeksacademy") : null;
+  let myLinkedin =
+    variables.linkedin == null
+      ? (myLinkedin = "school/4geeksacademy")
+      : variables.myLinkedin;
 
-  let myInstagram = `${variables.instagram}`;
-  variables.instagram == null ? (myInstagram = "4geeksacademy") : null;
+  let myInstagram =
+    variables.instagram == null
+      ? (myInstagram = "4geeksacademy")
+      : variables.myInstagram;
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
